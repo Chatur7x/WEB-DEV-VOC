@@ -3,29 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>VaultofCodes - Certificate Verifier (Dev)</title>
+  <title>VaultofCodes - Certificate Verifier</title>
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css"/>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <!-- Branding -->
+
+  <!-- HEADER -->
   <header class="brand-header">
-    <div class="brand-logo">VC</div>
-    <h1 class="brand-title">VaultofCodes</h1>
+    <div class="brand-inner">
+      <div class="brand-left">
+        <div class="brand-logo">VC</div>
+        <h1 class="brand-title">VaultofCodes</h1>
+      </div>
+      <p class="brand-tagline">Certificate Verification Portal</p>
+    </div>
   </header>
 
+  <!-- MAIN -->
   <main>
-    <div class="container">
-      <input id="identifier" type="text" placeholder="Enter Email or ID"/>
-      <button onclick="verifyStudent()">Verify</button>
+
+    <!-- Search Section -->
+    <section class="search-section">
+      <div class="container">
+        <h2 class="section-heading">Verify a Certificate</h2>
+        <p class="section-desc">Enter the student's email or ID to verify their certificate.</p>
+        <div class="input-group">
+          <input id="identifier" type="text" placeholder="Enter Email or ID (e.g. john@example.com)" />
+          <button onclick="verifyStudent()">Verify</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Spinner -->
+    <div class="spinner-wrapper">
+      <div class="spinner hidden"></div>
     </div>
 
-    <div id="result"></div>
-    <div class="spinner hidden"></div>
+    <!-- Result -->
+    <section id="result" class="result-section"></section>
+
   </main>
 
+  <!-- Toast -->
   <div id="toast"></div>
 
+  <!-- Script (unchanged) -->
   <script src="script.js"></script>
 </body>
 </html>
