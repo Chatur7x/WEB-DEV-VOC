@@ -1,99 +1,116 @@
+/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ===== BODY ===== */
 body {
   font-family: 'Poppins', sans-serif;
-  background: #f4f4f4;
-  color: #333;
+  min-height: 100vh;
+  /* Gradient background */
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 50px 20px;
+  padding: 60px 20px;
 }
 
+/* ===== HEADING ===== */
 .heading {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 .heading h1 {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   font-weight: 700;
-  color: #222;
+  color: #fff;
+  letter-spacing: 1px;
 }
 
 .heading p {
-  font-size: 1rem;
-  color: #666;
-  margin-top: 8px;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 10px;
+  font-weight: 300;
 }
 
+/* ===== CARDS GRID ===== */
 .cards-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 25px;
-  max-width: 1200px;
+  gap: 30px;
+  max-width: 1300px;
   width: 100%;
 }
 
+/* ===== GLASSMORPHISM CARD ===== */
 .card {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 25px 20px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 30px 25px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   position: relative;
   display: flex;
   flex-direction: column;
-  transition: box-shadow 0.2s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-10px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
 }
 
+/* ===== BADGE ===== */
 .card-badge {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  background: #007bff;
-  color: #fff;
-  font-size: 0.65rem;
-  font-weight: 600;
-  padding: 3px 10px;
-  border-radius: 4px;
-  text-transform: uppercase;
-}
-
-.card-title {
-  font-size: 1.2rem;
-  font-weight: 600;
+  top: 15px;
+  right: 15px;
+  background: linear-gradient(135deg, #f7971e, #ffd200);
   color: #222;
-  margin: 5px 0 8px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 4px 14px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
+/* ===== CARD TITLE ===== */
+.card-title {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 5px 0 10px;
+}
+
+/* ===== CARD DESCRIPTION ===== */
 .card-desc {
-  font-size: 0.85rem;
-  color: #666;
-  line-height: 1.5;
-  margin-bottom: 15px;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
+  margin-bottom: 18px;
 }
 
+/* ===== DETAILS ===== */
 .card-details {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  margin-bottom: 18px;
+  gap: 10px;
+  margin-bottom: 22px;
 }
 
 .detail {
   display: flex;
   justify-content: space-between;
-  padding: 4px 0;
-  border-bottom: 1px solid #eee;
-  font-size: 0.82rem;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.85rem;
 }
 
 .detail:last-child {
@@ -101,48 +118,67 @@ body {
 }
 
 .label {
-  color: #888;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 300;
 }
 
 .value {
-  color: #222;
+  color: #fff;
   font-weight: 500;
 }
 
+/* ===== BUTTON ===== */
 .btn {
-  display: block;
+  display: inline-block;
   text-align: center;
-  padding: 10px 0;
-  background: #007bff;
+  padding: 12px 0;
+  background: linear-gradient(135deg, #667eea, #764ba2);
   color: #fff;
   text-decoration: none;
-  font-weight: 500;
-  font-size: 0.85rem;
-  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 12px;
   margin-top: auto;
-  transition: background 0.2s;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .btn:hover {
-  background: #0056b3;
+  transform: scale(1.03);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
 }
 
+/* ===== RESPONSIVE: TABLET ===== */
 @media (max-width: 1024px) {
   .cards-container {
     grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .heading h1 {
+    font-size: 2rem;
   }
 }
 
+/* ===== RESPONSIVE: MOBILE ===== */
 @media (max-width: 600px) {
   .cards-container {
     grid-template-columns: 1fr;
+    gap: 25px;
   }
 
   .heading h1 {
     font-size: 1.6rem;
   }
 
+  .heading p {
+    font-size: 0.95rem;
+  }
+
+  .card {
+    padding: 25px 20px;
+  }
+
   body {
-    padding: 30px 15px;
+    padding: 40px 16px;
   }
 }
