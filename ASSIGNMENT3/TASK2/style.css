@@ -1,11 +1,9 @@
-/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ===== BASE ===== */
 body {
   font-family: 'Inter', sans-serif;
   background: #f0f2f5;
@@ -15,7 +13,6 @@ body {
   flex-direction: column;
 }
 
-/* ===== HEADER ===== */
 .brand-header {
   background: linear-gradient(135deg, #1e293b, #0f172a);
   padding: 18px 24px;
@@ -68,7 +65,6 @@ body {
   color: #94a3b8;
 }
 
-/* ===== MAIN ===== */
 main {
   flex: 1;
   padding: 40px 20px;
@@ -77,7 +73,6 @@ main {
   width: 100%;
 }
 
-/* ===== SEARCH SECTION ===== */
 .search-section {
   margin-bottom: 40px;
 }
@@ -102,7 +97,6 @@ main {
   margin-bottom: 24px;
 }
 
-/* ===== INPUT GROUP (Flexbox) ===== */
 .input-group {
   display: flex;
   gap: 12px;
@@ -155,7 +149,6 @@ button:active {
   transform: translateY(0);
 }
 
-/* ===== SPINNER ===== */
 .spinner-wrapper {
   display: flex;
   justify-content: center;
@@ -180,7 +173,6 @@ button:active {
   display: none !important;
 }
 
-/* ===== RESULT SECTION ===== */
 .result-section {
   animation: fadeIn 0.5s ease;
 }
@@ -190,7 +182,6 @@ button:active {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ===== STUDENT CARD ===== */
 .card {
   background: #fff;
   border-radius: 16px;
@@ -206,7 +197,6 @@ button:active {
   100% { opacity: 1; transform: scale(1) translateY(0); }
 }
 
-/* Photo - JS generated */
 .card img {
   width: 120px;
   height: 120px;
@@ -223,7 +213,6 @@ button:active {
   transform: scale(1.05);
 }
 
-/* Name - JS generated */
 .card h3 {
   font-size: 24px;
   font-weight: 700;
@@ -232,7 +221,6 @@ button:active {
   margin-bottom: 18px;
 }
 
-/* Info lines - JS generated */
 .card p {
   font-size: 14px;
   color: #475569;
@@ -241,7 +229,6 @@ button:active {
   line-height: 1.7;
 }
 
-/* Assignment heading - JS generated */
 .card h4 {
   font-size: 16px;
   font-weight: 700;
@@ -250,7 +237,6 @@ button:active {
   text-align: center;
 }
 
-/* Assignment badges - JS generated */
 .card .assignment-status {
   display: flex;
   flex-wrap: wrap;
@@ -275,7 +261,6 @@ button:active {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-/* Certificate link - JS generated */
 .card a {
   display: inline-flex;
   align-items: center;
@@ -297,7 +282,6 @@ button:active {
   box-shadow: 0 8px 24px rgba(99, 102, 241, 0.35);
 }
 
-/* ===== TOAST ===== */
 #toast {
   visibility: hidden;
   min-width: 280px;
@@ -324,7 +308,6 @@ button:active {
   transform: translateX(-50%) translateY(0);
 }
 
-/* ===== RESPONSIVE: TABLET ===== */
 @media (max-width: 768px) {
   main {
     padding: 24px 16px;
@@ -363,7 +346,6 @@ button:active {
   }
 }
 
-/* ===== RESPONSIVE: MOBILE ===== */
 @media (max-width: 480px) {
   .brand-inner {
     flex-direction: column;

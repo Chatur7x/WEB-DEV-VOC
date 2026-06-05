@@ -1,15 +1,12 @@
-/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ===== BODY ===== */
 body {
   font-family: 'Poppins', sans-serif;
   min-height: 100vh;
-  /* Gradient background */
   background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
   display: flex;
   flex-direction: column;
@@ -17,7 +14,6 @@ body {
   padding: 60px 20px;
 }
 
-/* ===== HEADING ===== */
 .heading {
   text-align: center;
   margin-bottom: 50px;
@@ -37,7 +33,6 @@ body {
   font-weight: 300;
 }
 
-/* ===== CARDS GRID ===== */
 .cards-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -46,7 +41,6 @@ body {
   width: 100%;
 }
 
-/* ===== GLASSMORPHISM CARD ===== */
 .card {
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(16px);
@@ -66,7 +60,6 @@ body {
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
 }
 
-/* ===== BADGE ===== */
 .card-badge {
   position: absolute;
   top: 15px;
@@ -81,7 +74,6 @@ body {
   letter-spacing: 1px;
 }
 
-/* ===== CARD TITLE ===== */
 .card-title {
   font-size: 1.35rem;
   font-weight: 600;
@@ -89,7 +81,6 @@ body {
   margin: 5px 0 10px;
 }
 
-/* ===== CARD DESCRIPTION ===== */
 .card-desc {
   font-size: 0.88rem;
   color: rgba(255, 255, 255, 0.75);
@@ -97,7 +88,6 @@ body {
   margin-bottom: 18px;
 }
 
-/* ===== DETAILS ===== */
 .card-details {
   display: flex;
   flex-direction: column;
@@ -127,7 +117,6 @@ body {
   font-weight: 500;
 }
 
-/* ===== BUTTON ===== */
 .btn {
   display: inline-block;
   text-align: center;
@@ -147,7 +136,6 @@ body {
   box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
 }
 
-/* ===== RESPONSIVE: TABLET ===== */
 @media (max-width: 1024px) {
   .cards-container {
     grid-template-columns: repeat(2, 1fr);
@@ -159,7 +147,6 @@ body {
   }
 }
 
-/* ===== RESPONSIVE: MOBILE ===== */
 @media (max-width: 600px) {
   .cards-container {
     grid-template-columns: 1fr;
